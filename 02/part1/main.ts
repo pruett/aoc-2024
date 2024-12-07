@@ -10,7 +10,7 @@ export function getNumberOfSafeReport(input: string): number {
     const direction: "desc" | "asc" =
       report[0] - report[1] > 0 ? "desc" : "asc";
 
-    for (let i = 0; i < report.length - 1; i++) {
+    for (let i = 0; i < report.length; i++) {
       const stepDiff = report[i] - report[i + 1];
 
       // Criteria for a safe report

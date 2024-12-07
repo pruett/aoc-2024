@@ -13,12 +13,12 @@ Deno.test("number of safe reports::example", () => {
   assertEquals(actual, expected);
 });
 
-// Deno.test("number of safe reports::puzzle", async () => {
-//   const decoder = new TextDecoder("utf-8");
-//   const data = await Deno.readFileSync("./02/part2/input.txt");
-//   const input = decoder.decode(data).trim();
+Deno.test("number of safe reports::puzzle", async () => {
+  const decoder = new TextDecoder("utf-8");
+  const data = await Deno.readFileSync("./02/part2/input.txt");
+  const input = decoder.decode(data).trim();
 
-//   const actual = getNumberOfSafeReport(input);
-//   const notExpected = 605;
-//   assertNotEquals(actual, notExpected);
-// });
+  const actual = getNumberOfSafeReports(input);
+  const expected = 626;
+  assertEquals(actual, expected);
+});

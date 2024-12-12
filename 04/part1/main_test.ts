@@ -17,12 +17,12 @@ MXMXAXMASX`;
   assertEquals(actual, expected);
 });
 
-// Deno.test("number of safe reports::puzzle", async () => {
-//   const decoder = new TextDecoder("utf-8");
-//   const data = await Deno.readFileSync("./03/part1/input.txt");
-//   const input = decoder.decode(data).trim();
+Deno.test("number of safe reports::puzzle", async () => {
+  const decoder = new TextDecoder("utf-8");
+  const data = await Deno.readFileSync("./04/part1/input.txt");
+  const input = decoder.decode(data).trim();
 
-//   const actual = computeInstructions(input);
-//   const expected = 580;
-//   assertEquals(actual, expected);
-// });
+  const actual = scan(input);
+  const expected = 580;
+  assertEquals(actual, expected);
+});
